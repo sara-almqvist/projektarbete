@@ -9,11 +9,13 @@ body {
 }
 
 :root {
+    --light-color: white;
+    --dark-color: #333;
     --bar-width: 60px;
     --bar-height: 8px;
     --hamburger-gap: 6px;
-    --foreground: #333;
-    --background: white;
+    --foreground: var(--dark-color);
+    --background: var(--light-color);
     --hamburger-margin: 8px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
