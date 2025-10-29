@@ -5,19 +5,21 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta author="Sara Almqvist"/>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="menustyles.css">
+        <!--<link rel="stylesheet" href="styles.css">-->
     </head>
     <body>
-        <nav>
-            <input type="checkbox" id="dropdownmenu">
-            <div class="dropdowncontent">
-                 <ul>
-                <li> <a href=# target="_self">Startsida</a></li>
-                <li> <a href=# target="_self">Om oss</a></li>
-                <li> <a href=# target="_self">Formulär och kontakt</a></li>
+        <label class="hamburger-menu">
+            <input type="checkbox"/>
+        </label>
+            <nav class="dropdowncontent">
+                <ul>
+                  <li> <a href="index.html" target="_self">Startsida</a></li>
+                  <li> <a href="about.html" target="_self">Om oss</a></li>
+                  <li> <a href="contact.html" target="_self">Formulär och kontakt</a></li>
               </ul>
-            </div>
-        </nav>
+            </nav>
+            <!--Lägg in Hero på startsidan i header-->
         <header class="header">
             <h1>Brf Södra Lugnet</h1>
             <button class="main"><a href="#" target="_self">Om oss</a></button>
