@@ -9,14 +9,14 @@ body {
 }
 
 :root {
-    --light-color: rgb(125, 238, 155);
-    --dark-color: #333;
+    --light-color: white;
+    --dark-color: rgb(16, 75, 95);
     --bar-width: 80px;
     --bar-height: 15px;
     --hamburger-gap: 10px;
     --foreground: var(--dark-color);
     --background: var(--light-color);
-    --hamburger-margin: 8px;
+    --hamburger-margin: 30px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
@@ -30,7 +30,7 @@ body {
     width: 100vw;
     position:absolute;
     top: var(--hamburger-margin);
-    left: var(--hamburger-margin);
+    left: calc(var(--hamburger-margin) * 0.5);
     z-index: 100;
     cursor: pointer;
 }
@@ -110,6 +110,7 @@ width:0;
     min-width: 100vw;
     min-height: 50vh;
     position:absolute;
+    z-index: 90;
 }
 
 .hamburger-menu:has(input:checked) + .dropdowncontent {

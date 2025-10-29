@@ -1,18 +1,21 @@
 $bg-color1: lightblue;
 $bg-color2: rgb(16, 75, 95);
-$f-color: black;
+$f-color1: black;
+$f-color2: white;
 $fontsize: 14px;
-$fontfamily-text: Arial, serif;
-$fontfamily-heading: Georgia, sans-serif;
+$fontfamily-text: Tahoma, serif;
+$fontfamily-heading: Verdana, sans-serif;
+$transistion: 200ms ease-in-out;
 
 @mixin ord-text {
-    color: $f-color;
+    color: $f-color1;
     font-size: $fontsize;
     font-family: $fontfamily-text;
 }
 
 body {
     background-color: $bg-color1;
+    background: linear-gradient(180deg,rgba(16, 75, 95, 1) 0%, rgba(173, 216, 230, 1) 100%);
 }
 
 header {
@@ -29,10 +32,11 @@ header {
         position: relative;
         left: 35%;
         top: 30%;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.5);
         width: fit-content;
         padding: 5px;
-        z-index:1;
+        text-align: center;
+        border-radius: 10px;
     }
 
     button {
@@ -41,17 +45,87 @@ header {
         top: 50%;
         border: 2px solid $bg-color2;
         box-shadow: 0px 0px 2px 1px rgb(200, 200, 202);
-    } 
-}
+        padding:20px;
+        border-radius: 33%;
+        background-color: $bg-color1;
+        transition: all $transistion;
 
-button {
-    padding:20px;
-    border-radius: 33%;
-    background-color: $bg-color1;
-
-    a {
+      a {
         text-decoration: none;
         @include ord-text();
         font-weight: bold;
+        text-transform: uppercase;
+        transition: color $transistion;
+        }
+    } 
+}
+
+button:hover,
+button:focus-visible {
+    background-color: $bg-color2;
+    border: 2px solid $bg-color1;
+
+    a {
+        color: $f-color2;
     }
+
+}
+
+
+.news {
+    @include ord-text();
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    align-items: baseline;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+    text-align: left;
+    
+
+    .newsitem {
+        padding: 15px;
+        margin: 10px;
+        border: 1px dotted $bg-color2;
+        flex: 1 1 25%;
+        scroll-snap-align: end;
+        
+        h2 {
+            background-color: $bg-color2;
+            color: $f-color2;
+            padding: 10px;
+        }
+    }
+}
+
+
+footer {
+    background-color: $bg-color2;
+    color: $f-color2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 5px;
+
+    p {
+        margin: 10px;
+        
+        a {
+            text-decoration: none;
+            color: $f-color2;
+        }
+    }
+
+    address {
+        margin-left: 15px;
+    }
+}
+
+.smalltext {
+    font-style: italic;
+    font-size: calc($fontsize * 0.75);
+}
+
+.smalltext::before {
+    content:"Publicerades: "
 }
