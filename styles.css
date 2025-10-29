@@ -5,10 +5,10 @@ body {
 
 header {
   background-color: lightblue;
-  background-image: url(/img/fastighet29.jpg);
+  background-image: url(/img/fastighet29.jpg), url(file:///Users/saraalmqvist/Documents/projektarbete/img/fastighet29.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 70vh;
   min-width: 100%;
   display: flex;
   flex-direction: column;
@@ -65,19 +65,24 @@ button:focus-visible a {
   justify-content: flex-start;
   scroll-snap-type: x mandatory;
   text-align: left;
+  height: 30vh;
 }
 .news .newsitem {
   padding: 15px;
   margin: 10px;
   border: 1px dotted rgb(16, 75, 95);
-  flex: 1 1 25%;
+  flex: 1 1 auto;
   scroll-snap-align: end;
   transition: scale 200ms ease-in-out;
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; */
 }
 .news .newsitem h2 {
   background-color: rgb(16, 75, 95);
   color: white;
   padding: 10px;
+  margin: 5px;
 }
 
 .newsitem:focus-visible,
