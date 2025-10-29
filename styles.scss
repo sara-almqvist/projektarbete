@@ -1,2 +1,36 @@
-$bg-color: lightblue;
+$bg-color1: lightblue;
+$bg-color2: rgb(16, 75, 95);
 $f-color: black;
+$fontsize: 14px;
+$fontfamily-text: Arial, serif;
+$fontfamily-heading: Georgia, sans-serif;
+
+
+nav {
+ display:block;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            border-top: 1px solid $bg-color2;
+            text-align: center;
+            padding: 0.5*$fontsize;
+            a {
+                text-decoration: none;
+                 color: $f-color;
+                 font-size: 1.5*$fontsize;
+            }
+        }
+    }
+
+}
+
+.dropdowncontent {
+    display:none;
+}
+
+#dropdownmenu:checked ~ .dropdowncontent{
+    display:block;
+
+}
