@@ -72,11 +72,18 @@ button:focus-visible a {
   border: 1px dotted rgb(16, 75, 95);
   flex: 1 1 25%;
   scroll-snap-align: end;
+  transition: scale 200ms ease-in-out;
 }
 .news .newsitem h2 {
   background-color: rgb(16, 75, 95);
   color: white;
   padding: 10px;
+}
+
+.newsitem:focus-visible,
+.newsitem:hover {
+  border: 2px dotted white;
+  transform: scale(1.1);
 }
 
 footer {

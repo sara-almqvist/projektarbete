@@ -88,6 +88,7 @@ button:focus-visible {
         border: 1px dotted $bg-color2;
         flex: 1 1 25%;
         scroll-snap-align: end;
+        transition: scale $transistion;
         
         h2 {
             background-color: $bg-color2;
@@ -95,6 +96,12 @@ button:focus-visible {
             padding: 10px;
         }
     }
+}
+
+.newsitem:focus-visible,
+.newsitem:hover {
+    border: 2px dotted $f-color2;
+    transform: scale(1.1);
 }
 
 
