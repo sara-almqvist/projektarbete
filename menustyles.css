@@ -9,7 +9,7 @@ body {
 }
 
 :root {
-    --light-color: white;
+    --light-color: rgb(215, 248, 81);
     --dark-color: #333;
     --bar-width: 60px;
     --bar-height: 8px;
@@ -36,8 +36,8 @@ body {
 }
 
 .hamburger-menu:has(input:checked) {
-    --foreground: white;
-    --background: #333;
+    --foreground: var(--light-color);
+    --background: var(--dark-color);
 }
 
 .hamburger-menu:has(input:focus-visible)::before,
