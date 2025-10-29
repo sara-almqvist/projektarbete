@@ -9,11 +9,11 @@ body {
 }
 
 :root {
-    --light-color: rgb(215, 248, 81);
+    --light-color: rgb(125, 238, 155);
     --dark-color: #333;
-    --bar-width: 60px;
-    --bar-height: 8px;
-    --hamburger-gap: 6px;
+    --bar-width: 80px;
+    --bar-height: 15px;
+    --hamburger-gap: 10px;
     --foreground: var(--dark-color);
     --background: var(--light-color);
     --hamburger-margin: 8px;
@@ -27,7 +27,7 @@ body {
     display:flex;
     flex-direction: column;
     gap: var(--hamburger-gap);
-    width: max-content;
+    width: 100vw;
     position:absolute;
     top: var(--hamburger-margin);
     left: var(--hamburger-margin);
@@ -70,6 +70,7 @@ body {
 li a {
     text-decoration: none;
     color: var(--background);
+    font-size: calc(var(--bar-height)*2);
 }
 
 ul {
@@ -106,8 +107,9 @@ width:0;
     padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
     background-color: var(--foreground);
     color: var(--background);
-    max-width: 10rem;
+    min-width: 100vw;
     min-height: 50vh;
+    position:absolute;
 }
 
 .hamburger-menu:has(input:checked) + .dropdowncontent {
