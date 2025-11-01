@@ -117,4 +117,8 @@ footer address {
 
 .smalltext::before {
   content: "Publicerades: ";
+}
+
+.contactform {
+  border: 1px solid lightblue;
 }/*# sourceMappingURL=styles.css.map */

@@ -140,3 +140,8 @@ footer {
 .smalltext::before {
     content:"Publicerades: "
 }
+
+.contactform {
+    // display: none;
+    border: 1px solid $bg-color1;
+}
