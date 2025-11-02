@@ -6,6 +6,7 @@
 
 body {
     margin: 0;
+    /* max-width: 1200px; */
 }
 
 :root {
@@ -16,7 +17,7 @@ body {
     --hamburger-gap: 10px;
     --foreground: var(--dark-color);
     --background: var(--light-color);
-    --hamburger-margin: 30px;
+    --hamburger-margin: 20px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
@@ -115,4 +116,12 @@ width:0;
 
 .hamburger-menu:has(input:checked) + .dropdowncontent {
     translate: 0;
+}
+
+header.second{
+    background-color: var(--light-color);
+    background-image: none;
+    height: calc(var(--hamburger-height) + var(--hamburger-margin) + 10px);
+    min-width: 100vw;
+    display: block;
 }

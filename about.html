@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <header class="second">
         <label class="hamburger-menu">
             <input type="checkbox"/>
         </label>
@@ -18,8 +19,9 @@
                   <li> <a href="contact.html" target="_self">Formulär och kontakt</a></li>
               </ul>
             </nav>
+        </header>
         
-        <main>
+        <main class="gridcontainer">
             <section class="intro">
                 <h1>Om Brf Södra Lugnet</h1>
                 <article>
@@ -39,7 +41,12 @@
                     <h2>Om föreningen</h2>
                     <p>Brf Södra Lugnet består av 10 medlemslägenheter, 1 uthyrningsrum, 10 carports och 20 uthyrningsbara förråd.</p>
                     <p> Byggnaderna uppfördes 1948 och det skedde en ombyggnation 2011-2012. Fastighetens areal är ca 2500 m<sup>2</sup></sup> varav av bostadsyta är 900 m<sup>2</sup>. Föreningen äger fastigheten Sanatoriet 1. </p>
-                    <img src="img/fastighet27.jpg" src="file:///Users/saraalmqvist/Documents/projektarbete/img/fastighet27.jpg" alt="Gul tvåvåningsbyggnad med tegeltak och trätrappa på vänster sida" title="Hus 27">
+                    <img 
+                    srcset="file:///Users/saraalmqvist/Documents/projektarbete/img/fastighet27liten.jpeg 320w, file:///Users/saraalmqvist/Documents/projektarbete/img/fastighet27.jpg 690w" 
+                    sizes="(width <= 600px) 320px, 
+                           690px"
+                    src="file:///Users/saraalmqvist/Documents/projektarbete/img/fastighet27.jpg" alt="Gul tvåvåningsbyggnad med tegeltak och trätrappa på vänster sida" title="Hus 27" />
+
                     <table class="lghtabell">
                         <thead>
                             <tr>
@@ -92,7 +99,7 @@
                     <table class="overview">
                         <thead>
                             <tr>
-                                <th>Flerårsöversikt &#40Tkr&#41</th>
+                                <th>Flerårs<wbr>översikt &#40Tkr&#41</th>
                                 <th>2024</th>
                                 <th>2023</th>
                                 <th>2022</th>
@@ -101,7 +108,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Nettoomsättning</td>
+                                <td>Netto<wbr>omsättning</td>
                                 <td>871</td>
                                 <td>877</td>
                                 <td>808</td>
@@ -122,7 +129,7 @@
                                 <td>56,6</td>
                             </tr>
                             <tr>
-                                <td>Balansomslutning</td>
+                                <td>Balans<wbr>omslutning</td>
                                 <td>16 199</td>
                                 <td>16 448</td>
                                 <td>16 538</td>
