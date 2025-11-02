@@ -221,3 +221,11 @@ h1,
 h2 {
     text-align: center;
 }
+
+article.about {
+    display:grid;
+    grid-template-columns: 1 fr;
+    align-items: center;
+    justify-content: center;
+
+}
