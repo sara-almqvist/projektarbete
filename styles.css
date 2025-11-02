@@ -121,4 +121,29 @@ footer address {
 
 .contactform {
   border: 1px solid lightblue;
+}
+
+table {
+  border: 1px solid rgb(16, 75, 95);
+}
+table thead {
+  background-color: lightblue;
+  color: rgb(16, 75, 95);
+  text-align: left;
+}
+table th,
+table td {
+  padding: 10px;
+}
+table tr:nth-child(even) {
+  background-color: lightblue;
+  color: black;
+}
+table tfoot {
+  background-color: lightblue;
+  color: black;
+  font-weight: bold;
+}
+table tfoot td:first-child {
+  text-align: right;
 }/*# sourceMappingURL=styles.css.map */
