@@ -169,7 +169,7 @@ table tfoot td:first-child {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  margin-left: 15px;
+  margin: 0 15px;
 }
 
 section {
@@ -177,4 +177,10 @@ section {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */

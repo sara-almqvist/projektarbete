@@ -121,7 +121,6 @@ width:0;
 header.second{
     background-color: var(--light-color);
     background-image: none;
-    height: calc(var(--hamburger-height) + var(--hamburger-margin) + 10px);
-    min-width: 100vw;
+    height: calc(var(--hamburger-height) + var(--hamburger-margin) *2);
     display: block;
 }
