@@ -17,6 +17,7 @@ header {
 }
 header h1 {
   color: rgb(16, 75, 95);
+  text-shadow: 1px 1px 2px black;
   font-family: Verdana, sans-serif;
   background-color: rgba(255, 255, 255, 0.5);
   width: -moz-fit-content;
@@ -24,11 +25,11 @@ header h1 {
   padding: 5px;
   text-align: center;
   border-radius: 10px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 header button {
   border: 2px solid rgb(16, 75, 95);
-  box-shadow: 0px 0px 2px 1px rgb(200, 200, 202);
+  box-shadow: 1px 1px 2px 1px rgb(200, 200, 202);
   padding: 20px;
   border-radius: 33%;
   background-color: lightblue;
@@ -37,11 +38,13 @@ header button {
 header button a {
   text-decoration: none;
   color: black;
-  font-size: 14px;
+  font-size: 16px;
   font-family: Tahoma, serif;
+  letter-spacing: 1px;
   font-weight: bold;
   text-transform: uppercase;
-  transition: color 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  text-shadow: 1px 1px 2px white;
 }
 
 button:hover,
@@ -52,12 +55,14 @@ button:focus-visible {
 button:hover a,
 button:focus-visible a {
   color: white;
+  text-shadow: none;
 }
 
 .news {
   color: black;
-  font-size: 14px;
+  font-size: 16px;
   font-family: Tahoma, serif;
+  letter-spacing: 1px;
   display: flex;
   flex-wrap: nowrap;
   overflow: auto;
@@ -91,6 +96,10 @@ button:focus-visible a {
   transform: scale(1.1);
 }
 
+main {
+  margin: 0 auto;
+}
+
 footer {
   background-color: rgb(16, 75, 95);
   color: white;
@@ -112,7 +121,7 @@ footer address {
 
 .smalltext {
   font-style: italic;
-  font-size: 10.5px;
+  font-size: 12px;
 }
 
 .smalltext::before {
@@ -124,7 +133,7 @@ footer address {
 }
 
 table {
-  border: 1px solid rgb(16, 75, 95);
+  border: 1px solid white;
   border-collapse: collapse;
   table-layout: fixed;
   width: auto;
@@ -132,15 +141,10 @@ table {
   font-family: Tahoma, serif;
   letter-spacing: 1px;
 }
-table thead {
-  background-color: lightblue;
-  color: rgb(16, 75, 95);
-  text-align: left;
-}
 table th,
 table td {
   padding: 10px;
-  border: 1px solid rgb(16, 75, 95);
+  border: 1px solid white;
 }
 table td {
   text-align: right;
@@ -148,9 +152,17 @@ table td {
 table td:first-child {
   text-align: left;
 }
-table tr:nth-child(even) {
+table tbody tr:nth-child(even) {
   background-color: lightblue;
   color: black;
+}
+table tbody tr:nth-child(odd) {
+  background-color: rgba(173, 216, 230, 0.5);
+}
+table thead {
+  background-color: rgb(16, 75, 95);
+  color: white;
+  text-align: left;
 }
 table tfoot {
   background-color: lightblue;
@@ -165,8 +177,14 @@ table tfoot td:first-child {
   text-align: left;
 }
 
+p {
+  color: black;
+  font-size: 16px;
+  font-family: Tahoma, serif;
+  letter-spacing: 1px;
+}
+
 .history {
-  grid-area: intro;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -174,7 +192,6 @@ table tfoot td:first-child {
 }
 
 .om {
-  grid-area: about;
   display: grid;
   grid-template: auto auto auto auto auto auto/1fr;
   grid-template-areas: "r" "img" "c" "tab1" "tab2" "tab3";
@@ -187,9 +204,19 @@ table tfoot td:first-child {
 .om p {
   grid-area: c;
   align-self: center;
+  letter-spacing: 1px;
+  color: black;
+  font-size: 16px;
+  font-family: Tahoma, serif;
+  letter-spacing: 1px;
+  padding: 15px;
+  background-color: lightblue;
+  border-radius: 10px;
 }
 .om img {
   grid-area: img;
+  justify-self: center;
+  border-radius: 25%;
 }
 .om table.lghtabell {
   grid-area: tab1;
@@ -205,11 +232,15 @@ table tfoot td:first-child {
 }
 
 .rules {
-  grid-area: rules;
+  text-align: center;
+}
+.rules h2 {
+  margin-top: 48px;
 }
 
 .rubrik {
-  grid-area: rubrik;
+  color: white;
+  text-shadow: 1px 1px 2px black;
 }
 
 h1,

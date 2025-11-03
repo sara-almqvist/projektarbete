@@ -2,7 +2,8 @@ $bg-color1: lightblue;
 $bg-color2: rgb(16, 75, 95);
 $f-color1: black;
 $f-color2: white;
-$fontsize: 14px;
+$table-color: rgba(173, 216, 230, 0.5);
+$fontsize: 16px;
 $fontfamily-text: Tahoma, serif;
 $fontfamily-heading: Verdana, sans-serif;
 $transistion: 200ms ease-in-out;
@@ -14,6 +15,7 @@ $colummlarge: 1fr 1fr 1fr;
     color: $f-color1;
     font-size: $fontsize;
     font-family: $fontfamily-text;
+    letter-spacing: 1px;
 }
 
 @mixin background-color {
@@ -50,6 +52,7 @@ header {
     
     h1 {
         color: $bg-color2;
+        text-shadow: 1px 1px 2px black;
         font-family: $fontfamily-heading;
         background-color: rgba(255, 255, 255, 0.5);
         width: fit-content;
@@ -61,7 +64,7 @@ header {
 
     button {
         border: 2px solid $bg-color2;
-        box-shadow: 0px 0px 2px 1px rgb(200, 200, 202);
+        box-shadow: 1px 1px 2px 1px rgb(200, 200, 202);
         padding:20px;
         border-radius: 33%;
         background-color: $bg-color1;
@@ -72,7 +75,8 @@ header {
         @include ord-text();
         font-weight: bold;
         text-transform: uppercase;
-        transition: color $transistion;
+        transition: all $transistion;
+        text-shadow: 1px 1px 2px white;
         }
     } 
 }
@@ -84,6 +88,7 @@ button:focus-visible {
 
     a {
         color: $f-color2;
+        text-shadow: none;
     }
 
 }
@@ -126,6 +131,9 @@ button:focus-visible {
     transform: scale(1.1);
 }
 
+main {
+    margin: 0 auto;
+}
 
 footer {
     @include b2-c2();
@@ -163,7 +171,7 @@ footer {
 }
 
 table {
-    border: 1px solid $bg-color2;
+    border: 1px solid $f-color2;
     border-collapse: collapse;
     table-layout: fixed;
     width: auto;
@@ -171,14 +179,10 @@ table {
     font-family: $fontfamily-text;
     letter-spacing: 1px;
 
-    thead {
-        @include background-color();
-        text-align: left;
-    }
     th,
     td {
         padding: 10px;
-        border: 1px solid $bg-color2;
+        border: 1px solid $f-color2;
     }
     td {
         text-align: right;
@@ -188,9 +192,20 @@ table {
         text-align: left;
     }
 
-    tr:nth-child(even) {
+   tbody {
+     tr:nth-child(even) {
         @include b1-c1();
     }
+    tr:nth-child(odd) {
+        background-color: rgba(173, 216, 230, 0.5)
+    }
+   }
+
+    thead {
+        @include b2-c2();
+        text-align: left;
+        }
+    
 
     tfoot {
         @include background-color();
@@ -206,18 +221,11 @@ table {
    text-align: left;
 }
 
-// .gridcontainer {
-//     // display: grid;
-//     // grid-template: auto 2fr 2fr / 1fr 1fr 1fr;
-//     // grid-template-areas: 
-//     // "rubrik rubrik rubrik"
-//     // "about about intro"
-//     // "about about rules";
-//     // gap: 15px;
-// }
+p {
+    @include ord-text();
+}
 
 .history {
-    grid-area: intro;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -226,7 +234,6 @@ table {
 }
 
 .om {
-    grid-area: about;
     display: grid;
     grid-template: auto auto auto auto auto auto/ 1fr;
     grid-template-areas: 
@@ -241,13 +248,21 @@ table {
 
     h2 {
         grid-area: r;
+
     }
     p {
         grid-area: c;
         align-self: center;
+        letter-spacing: 1px;
+        @include ord-text();
+        padding: 15px;
+        background-color: $bg-color1;
+        border-radius: 10px;
     }
     img {
         grid-area: img;
+        justify-self: center;
+        border-radius: 25%;
         
     }
     table.lghtabell {
@@ -267,13 +282,16 @@ table {
 }
 
 .rules {
-    grid-area: rules;
+    text-align: center;
+
+    h2 {
+        margin-top: calc($fontsize *3);
+    }
 }
 
 .rubrik {
-    grid-area: rubrik;
-    
-
+    color: $f-color2;
+    text-shadow: 1px 1px 2px black;
 }
 
 h1,
