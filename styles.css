@@ -110,6 +110,7 @@ footer {
 }
 footer p {
   margin: 10px;
+  color: white;
 }
 footer p a {
   text-decoration: none;
@@ -189,6 +190,15 @@ p {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
+}
+.history p {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+.history img {
+  border-radius: 5px;
 }
 
 .om {
@@ -237,6 +247,15 @@ p {
 .rules h2 {
   margin-top: 48px;
 }
+.rules ul {
+  text-align: left;
+  list-style-type: square;
+  color: black;
+}
+.rules ul li a {
+  color: black;
+  font-size: 16px;
+}
 
 .rubrik {
   color: white;
@@ -249,6 +268,18 @@ h2 {
 }
 
 @media screen and (min-width: 600px) {
+  .om {
+    grid-template: auto auto auto auto/1fr 1fr;
+    grid-template-areas: "r r" "tab1 img" "tab1 c" "tab2 tab3";
+  }
+  .om p {
+    align-self: start;
+  }
+  .om img {
+    align-self: center;
+  }
+}
+@media screen and (min-width: 1250px) {
   .om {
     grid-template: auto auto auto auto/1fr 1fr 1fr;
     grid-template-areas: "r r r" "img c c" "tab3 tab1 tab1" "tab2 tab1 tab1";
