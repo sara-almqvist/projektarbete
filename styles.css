@@ -176,8 +176,8 @@ table tfoot td:first-child {
 .om {
   grid-area: about;
   display: grid;
-  grid-template: auto auto auto auto/1fr 1fr 1fr;
-  grid-template-areas: "r r r" "img c c" "tab3 tab1 tab1" "tab2 tab1 tab1";
+  grid-template: auto auto auto auto auto auto/1fr;
+  grid-template-areas: "r" "img" "c" "tab1" "tab2" "tab3";
   gap: 10px;
   padding: 10px;
 }
@@ -215,4 +215,11 @@ table tfoot td:first-child {
 h1,
 h2 {
   text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .om {
+    grid-template: auto auto auto auto/1fr 1fr 1fr;
+    grid-template-areas: "r r r" "img c c" "tab3 tab1 tab1" "tab2 tab1 tab1";
+  }
 }/*# sourceMappingURL=styles.css.map */
