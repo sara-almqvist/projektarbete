@@ -323,7 +323,11 @@ h2 {
     text-align: center;
 }
 
-@media screen and (min-width: 600px) {
+img.extra {
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
     .om {
         grid-template: auto auto auto auto/ 1fr 1fr;
         grid-template-areas: 
@@ -349,9 +353,21 @@ h2 {
         grid-template: auto auto auto auto/ 1fr 1fr 1fr;
         grid-template-areas: 
         "r r r"
-        "img c c"
-        "tab3 tab1 tab1"
-        "tab2 tab1 tab1";
+        "img img tab2"
+        "img img tab3"
+        "c c tab1"
+        "img2 img2 tab1"
+        ;
+        gap: 20px;
 
+        p {
+            align-self: start;
+        }
+
+    }
+    img.extra {
+        display: block;
+        border-radius: 25%;
+        grid-area: img2;
     }
 }
