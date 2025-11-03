@@ -165,29 +165,54 @@ table tfoot td:first-child {
   text-align: left;
 }
 
-.gridcontainer {
+.history {
+  grid-area: intro;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  margin: 0 15px;
+  align-items: center;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+.om {
+  grid-area: about;
+  display: grid;
+  grid-template: auto auto auto auto/1fr 1fr 1fr;
+  grid-template-areas: "r r r" "img c c" "tab3 tab1 tab1" "tab2 tab1 tab1";
+  gap: 10px;
+  padding: 10px;
+}
+.om h2 {
+  grid-area: r;
+}
+.om p {
+  grid-area: c;
+  align-self: center;
+}
+.om img {
+  grid-area: img;
+}
+.om table.lghtabell {
+  grid-area: tab1;
+  align-self: start;
+}
+.om table.overview {
+  grid-area: tab2;
+  align-self: start;
+}
+.om table.keyvalues {
+  grid-area: tab3;
+  align-self: start;
+}
+
+.rules {
+  grid-area: rules;
+}
+
+.rubrik {
+  grid-area: rubrik;
 }
 
 h1,
 h2 {
   text-align: center;
-}
-
-article.about {
-  display: grid;
-  grid-template-columns: 1 fr;
-  align-items: center;
-  justify-content: center;
 }/*# sourceMappingURL=styles.css.map */

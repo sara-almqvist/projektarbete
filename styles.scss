@@ -6,6 +6,9 @@ $fontsize: 14px;
 $fontfamily-text: Tahoma, serif;
 $fontfamily-heading: Verdana, sans-serif;
 $transistion: 200ms ease-in-out;
+$columnsmall: 1fr;
+$columnmedium: 1fr 1fr;
+$colummlarge: 1fr 1fr 1fr;
 
 @mixin ord-text {
     color: $f-color1;
@@ -203,18 +206,72 @@ table {
    text-align: left;
 }
 
-.gridcontainer {
+// .gridcontainer {
+//     // display: grid;
+//     // grid-template: auto 2fr 2fr / 1fr 1fr 1fr;
+//     // grid-template-areas: 
+//     // "rubrik rubrik rubrik"
+//     // "about about intro"
+//     // "about about rules";
+//     // gap: 15px;
+// }
+
+.history {
+    grid-area: intro;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: 0 15px;
-}
-section {
-    display:flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
+    
+}
+
+.om {
+    grid-area: about;
+    display: grid;
+    grid-template: auto auto auto auto/ 1fr 1fr 1fr;
+    grid-template-areas: 
+    "r r r"
+    "img c c"
+    "tab3 tab1 tab1"
+    "tab2 tab1 tab1";
+    gap: 10px;
+    padding: 10px;
+
+    h2 {
+        grid-area: r;
+    }
+    p {
+        grid-area: c;
+        align-self: center;
+    }
+    img {
+        grid-area: img;
+        
+    }
+    table.lghtabell {
+        grid-area: tab1;
+        align-self: start;
+    }
+    table.overview {
+        grid-area: tab2;
+        align-self: start;
+    }
+    table.keyvalues {
+        grid-area: tab3;
+        align-self: start;
+    }
+
+    
+}
+
+.rules {
+    grid-area: rules;
+}
+
+.rubrik {
+    grid-area: rubrik;
+    
+
 }
 
 h1,
@@ -222,10 +279,3 @@ h2 {
     text-align: center;
 }
 
-article.about {
-    display:grid;
-    grid-template-columns: 1 fr;
-    align-items: center;
-    justify-content: center;
-
-}
