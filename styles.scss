@@ -166,11 +166,6 @@ footer {
     content:"Publicerades: "
 }
 
-.contactform {
-    // display: none;
-    border: 1px solid $bg-color1;
-}
-
 table {
     border: 1px solid $f-color2;
     border-collapse: collapse;
@@ -309,6 +304,44 @@ img.extra {
     display: none;
 }
 
+section {
+    border: 1px solid $bg-color1;
+    margin: 15px;
+    
+    p {
+        color: $f-color2;
+        margin-left: 15px;
+    }
+
+    ul {
+        list-style-type: square;
+        color: $f-color2;
+        transition: all $transistion;
+
+        li a {
+            text-decoration: none;
+            @include ord-text();
+            transition: all $transistion;
+        }
+    }
+}
+
+li a:hover,
+li a:focus-visible,
+li label:hover,
+li label:hover {
+    color: $f-color2;
+    text-decoration: underline;
+}
+
+li a:visited {
+    color: $table-color;
+}
+
+.contactform {
+    border: 1px solid $bg-color1;
+}
+
 @media screen and (min-width: 700px) {
     .om {
         grid-template: auto auto auto auto/ 1fr 1fr;
@@ -329,11 +362,7 @@ img.extra {
 
 }
 
-section {
-    p {
-        color: $f-color2;
-    }
-}
+
 
 
 @media screen and (min-width: 1250px) {

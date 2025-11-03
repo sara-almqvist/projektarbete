@@ -31,16 +31,33 @@
                         <li><a href="content/welcome.pdf" href="/Users/saraalmqvist/Documents/projektarbete/content/welcome" target="_blank">Välkomstbrev till nya medlemmar</a> </li>
                     </ul>
             </section>
-            <section>
-                <h2 class="rubrik">Klicka på formulären</h2>
+            <section class="formlink">
+                <h2 class="rubrik">Formulär</h2>
                 <ul>
                     <li> <a href="https://airtable.com/appll8Xt8s2Qr92xi/pagawao9mNQHFaMHE/form" target="_blank">Felanmälan</a> </li>
-                    <li> <a href="#kontakt" target="_self">Kontakta styrelsen</a></li>
+                    <!-- <li> <a href="#kontakt" target="_self">Kontakta styrelsen</a></li> -->
                     <li> <a href="https://airtable.com/appll8Xt8s2Qr92xi/pag0CXkHhIdN4I9pF/form" target="_blank"> Lämna motion till föreningsstämman</a></li>
                     <li> <a href="https://airtable.com/appll8Xt8s2Qr92xi/pagPPInhIC8xGmgHn/form" target="_blank"> Intresseanmälan hyra förråd eller carport</a></li>
-                </ul>    
+                </ul> 
+
             </section>
-            <section>
+
+            <section class="contactform">
+                <h2 class="rubrik" id="kontakt">Kontakta styrelsen</h2>
+                  <form action="mailto:brfsodralugnet@gmail.com" method="post" enctype="text/plain">
+                    <label for="contactname">Ditt namn:</label><br>
+                    <input type="text" id="contactname" name="contactname"><br>
+                    <label for="email">Din e-postadress:</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="message">Meddelande till styrelsen:</label><br>
+                    <textarea id="message" name="message"></textarea><br>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+
+            </section>
+
+            <section class="links">
                 <h2 class="rubrik">Användbara länkar</h2>
                 <ul>
                     <li> <a href="https://www.bostadsratterna.se/" target="_blank">Bostadsrätterna</a> </li>
@@ -50,7 +67,7 @@
                     <li> <a href="#" target="_blank">Länknamn</a> </li> -->
                 </ul>
             </section>
-            <div class="contactform">
+            <!-- <div class="contactform">
                 <form action="mailto:brfsodralugnet@gmail.com" method="post" enctype="text/plain">
                     <h3 id="kontakt">Kontakta styrelsen</h3>
                     <label for="contactname">Ditt namn:</label><br>
@@ -63,7 +80,7 @@
                     <input type="submit">
                     <input type="reset">
                 </form>
-            </div>
+            </div> -->
 
         </main>
         <footer class="foot">

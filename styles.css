@@ -129,10 +129,6 @@ footer address {
   content: "Publicerades: ";
 }
 
-.contactform {
-  border: 1px solid lightblue;
-}
-
 table {
   border: 1px solid white;
   border-collapse: collapse;
@@ -256,6 +252,44 @@ img.extra {
   display: none;
 }
 
+section {
+  border: 1px solid lightblue;
+  margin: 15px;
+}
+section p {
+  color: white;
+  margin-left: 15px;
+}
+section ul {
+  list-style-type: square;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+section ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-family: Tahoma, serif;
+  letter-spacing: 1px;
+  transition: all 200ms ease-in-out;
+}
+
+li a:hover,
+li a:focus-visible,
+li label:hover,
+li label:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+li a:visited {
+  color: rgba(173, 216, 230, 0.5);
+}
+
+.contactform {
+  border: 1px solid lightblue;
+}
+
 @media screen and (min-width: 700px) {
   .om {
     grid-template: auto auto auto auto/1fr 1fr;
@@ -268,10 +302,6 @@ img.extra {
     align-self: center;
   }
 }
-section p {
-  color: white;
-}
-
 @media screen and (min-width: 1250px) {
   .om {
     grid-template: auto auto auto auto/1fr 1fr 1fr;
