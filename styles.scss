@@ -295,25 +295,6 @@ p {
     
 }
 
-.rules {
-    text-align: center;
-
-    h2 {
-        margin-top: calc($fontsize *3);
-    }
-
-    ul {
-        text-align: left;
-        list-style-type: square;
-        color: $f-color1;
-
-        li a{
-            color: $f-color1;
-            font-size: $fontsize;
-        }
-    }
-}
-
 .rubrik {
     color: $f-color2;
     text-shadow: 1px 1px 2px black;
@@ -346,6 +327,12 @@ img.extra {
 
     }
 
+}
+
+section {
+    p {
+        color: $f-color2;
+    }
 }
 
 
