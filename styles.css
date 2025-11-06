@@ -282,12 +282,40 @@ li label:hover {
   text-decoration: underline;
 }
 
-li a:visited {
-  color: rgba(173, 216, 230, 0.5);
-}
-
 .contactform {
-  border: 1px solid lightblue;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 16px;
+  font-family: Tahoma, serif;
+  letter-spacing: 1px;
+}
+.contactform input[type=submit],
+.contactform input[type=reset] {
+  color: black;
+  font-size: 16px;
+  font-family: Tahoma, serif;
+  letter-spacing: 1px;
+  background-color: rgb(16, 75, 95);
+  color: white;
+  padding: 16px;
+  margin: 15px;
+  transition: all 200ms ease-in-out;
+  border-radius: 5px;
+}
+.contactform input:hover,
+.contactform input:focus-visible,
+.contactform textarea:hover,
+.contactform textarea:focus-visible {
+  border: 2px solid rgb(16, 75, 95);
+}
+.contactform input[type=submit]:hover,
+.contactform input[type=reset]:hover {
+  background-color: lightblue;
+  color: black;
 }
 
 @media screen and (min-width: 700px) {

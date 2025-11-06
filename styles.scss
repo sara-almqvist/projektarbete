@@ -334,13 +334,40 @@ li label:hover {
     text-decoration: underline;
 }
 
-li a:visited {
-    color: $table-color;
+.contactform {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    @include ord-text();
+
+
+    input[type=submit],
+    input[type=reset] {
+        @include ord-text();
+        @include b2-c2();
+        padding: $fontsize;
+        margin: 15px;
+        transition: all $transistion;
+        border-radius: 5px;
+    }
+
+    input:hover,
+    input:focus-visible,
+    textarea:hover,
+    textarea:focus-visible {
+        border: 2px solid $bg-color2;
+    }
+
+    input[type=submit]:hover,
+    input[type=reset]:hover {
+        @include b1-c1();
+    }
+
 }
 
-.contactform {
-    border: 1px solid $bg-color1;
-}
+
 
 @media screen and (min-width: 700px) {
     .om {
