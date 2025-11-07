@@ -29,10 +29,10 @@ header h1 {
   margin-bottom: 32px;
 }
 header button {
-  border: 2px solid rgb(16, 75, 95);
-  box-shadow: 1px 1px 2px 1px rgb(200, 200, 202);
+  border: 4px solid rgb(16, 75, 95);
+  box-shadow: 1px 1px 1px 2px rgb(1, 1, 1);
   padding: 20px;
-  border-radius: 33%;
+  border-radius: 20px;
   background-color: lightblue;
   transition: all 200ms ease-in-out;
 }
@@ -51,7 +51,7 @@ header button a {
 button:hover,
 button:focus-visible {
   background-color: rgb(16, 75, 95);
-  border: 2px solid lightblue;
+  border: 4px solid lightblue;
 }
 button:hover a,
 button:focus-visible a {
@@ -65,11 +65,11 @@ button:focus-visible a {
   font-family: Tahoma, serif;
   letter-spacing: 1px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow: auto;
   align-items: baseline;
   justify-content: flex-start;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: y mandatory;
   text-align: left;
   height: 30vh;
 }
@@ -78,11 +78,9 @@ button:focus-visible a {
   margin: 10px;
   border: 1px dotted rgb(16, 75, 95);
   flex: 1 1 auto;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
   transition: scale 200ms ease-in-out;
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap; */
+  overflow: auto;
 }
 .news .newsitem h2 {
   background-color: rgb(16, 75, 95);
@@ -94,7 +92,7 @@ button:focus-visible a {
 .newsitem:focus-visible,
 .newsitem:hover {
   border: 2px dotted white;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 main {
@@ -113,6 +111,7 @@ footer {
 footer p {
   margin: 10px;
   color: white;
+  font-size: small;
 }
 footer p a {
   text-decoration: none;
@@ -378,6 +377,17 @@ section.links {
 }
 
 @media screen and (min-width: 700px) {
+  .news {
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+  .newsitem {
+    height: 25vh;
+    min-width: 250px;
+    max-width: 500px;
+  }
   .om {
     grid-template: auto auto auto auto/1fr 1fr;
     grid-template-areas: "r r" "tab1 img" "tab1 c" "tab2 tab3";
@@ -402,6 +412,9 @@ section.links {
   }
 }
 @media screen and (min-width: 1250px) {
+  .newsitem {
+    height: 28vh;
+  }
   .om {
     grid-template: auto auto auto auto/1fr 1fr 1fr;
     grid-template-areas: "r r r" "img img tab2" "img img tab3" "c c tab1" "img2 img2 tab1";

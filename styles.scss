@@ -64,10 +64,10 @@ header {
     }
 
     button {
-        border: 2px solid $bg-color2;
-        box-shadow: 1px 1px 2px 1px rgb(200, 200, 202);
-        padding:20px;
-        border-radius: 33%;
+        border: 4px solid $bg-color2;
+        box-shadow: 1px 1px 1px 2px rgb(1, 1, 1);
+        padding: 20px;
+        border-radius: 20px;
         background-color: $bg-color1;
         transition: all $transistion;
 
@@ -85,7 +85,7 @@ header {
 button:hover,
 button:focus-visible {
     background-color: $bg-color2;
-    border: 2px solid $bg-color1;
+    border: 4px solid $bg-color1;
 
     a {
         color: $f-color2;
@@ -98,11 +98,11 @@ button:focus-visible {
 .news {
     @include ord-text();
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     overflow: auto;
     align-items: baseline;
     justify-content: flex-start;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: y mandatory;
     text-align: left;
     height: clamp(20vh, 30vh, 35vh);
     
@@ -112,11 +112,9 @@ button:focus-visible {
         margin: 10px;
         border: 1px dotted $bg-color2;
         flex: 1 1 auto;
-        scroll-snap-align: end;
+        scroll-snap-align: start;
         transition: scale $transistion;
-        /* display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap; */
+        overflow: auto;
         
         h2 {
             @include b2-c2();
@@ -129,7 +127,7 @@ button:focus-visible {
 .newsitem:focus-visible,
 .newsitem:hover {
     border: 2px dotted $f-color2;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 main {
@@ -147,6 +145,7 @@ footer {
     p {
         margin: 10px;
         color: $f-color2;
+        font-size: small;
         
         a {
             text-decoration: none;
@@ -436,6 +435,20 @@ section.links {
 }
 
 @media screen and (min-width: 700px) {
+    .news {
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+    .newsitem {
+        height: clamp(20vh, 25vh, 35vh);
+        min-width: 250px;
+        max-width: 500px;
+        
+    }
+
     .om {
         grid-template: auto auto auto auto/ 1fr 1fr;
         grid-template-areas: 
@@ -481,6 +494,10 @@ section.links {
 
 
 @media screen and (min-width: 1250px) {
+    .newsitem {
+        height: clamp(20vh, 28vh, 35vh);
+    }
+
     .om {
         grid-template: auto auto auto auto/ 1fr 1fr 1fr;
         grid-template-areas: 
