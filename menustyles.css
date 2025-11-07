@@ -20,6 +20,7 @@ body {
     --hamburger-margin: 20px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --menu-height: calc(var(--hamburger-height) + var(--hamburger-margin) *2);
 }
 
 .hamburger-menu {
@@ -121,6 +122,20 @@ width:0;
 header.second{
     background-color: var(--light-color);
     background-image: none;
-    height: calc(var(--hamburger-height) + var(--hamburger-margin) *2);
+    height: var(--menu-height);
     display: block;
+}
+
+@media screen and (min-width: 1250px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .dropdowncontent {
+        min-height: var(--menu-height);
+        max-height: var(--menu-height);
+        padding-top: 30px;
+    }
 }
