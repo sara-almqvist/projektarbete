@@ -7,9 +7,7 @@ $fontsize: 16px;
 $fontfamily-text: Tahoma, serif;
 $fontfamily-heading: Verdana, sans-serif;
 $transistion: 200ms ease-in-out;
-$columnsmall: 1fr;
-$columnmedium: 1fr 1fr;
-$colummlarge: 1fr 1fr 1fr;
+
 
 @mixin ord-text {
     color: $f-color1;
@@ -222,6 +220,19 @@ p {
     @include ord-text();
 }
 
+abbr {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: calc($fontsize * 3);
+}
+
+h2 {
+    font-size: calc($fontsize * 2);
+}
+
 .history {
     display: flex;
     flex-direction: column;
@@ -239,6 +250,10 @@ p {
     img {
         border-radius: 5px;
         padding-bottom: 15px;
+    }
+
+    blockquote {
+        @include ord-text();
     }
     
 }
