@@ -254,7 +254,7 @@ img.extra {
 
 section {
   border: 1px solid lightblue;
-  margin: 15px;
+  margin-left: 15px;
 }
 section p {
   color: white;
@@ -318,6 +318,54 @@ li label:hover {
   color: black;
 }
 
+img.pic1 {
+  grid-area: pic1;
+}
+
+img.pic2 {
+  grid-area: pic2;
+}
+
+img.pic3 {
+  grid-area: pic3;
+}
+
+img.pic4 {
+  grid-area: pic4;
+  margin-bottom: 15px;
+}
+
+h1 {
+  grid-area: r;
+}
+
+section.rules {
+  grid-area: rules;
+}
+
+section.formlink {
+  grid-area: form;
+}
+
+section.contactform {
+  grid-area: contact;
+}
+
+section.links {
+  grid-area: link;
+}
+
+.wrapper {
+  display: grid;
+  grid-template: repeat(5, auto)/1fr;
+  grid-template-areas: "r" "rules" "form" "contact" "link";
+}
+.wrapper img {
+  display: none;
+  border-radius: 10px;
+  border: 2px solid lightblue;
+}
+
 @media screen and (min-width: 700px) {
   .om {
     grid-template: auto auto auto auto/1fr 1fr;
@@ -328,6 +376,18 @@ li label:hover {
   }
   .om img {
     align-self: center;
+  }
+  .wrapper {
+    grid-template: repeat(5, auto)/1fr 1fr;
+    grid-template-areas: "r r" "rules pic1" "form pic2" "contact pic3" "link pic4";
+    align-items: center;
+    max-width: 100vw;
+    gap: 10px;
+    padding: 10px;
+  }
+  .wrapper img {
+    display: block;
+    justify-self: center;
   }
 }
 @media screen and (min-width: 1250px) {
@@ -343,5 +403,22 @@ li label:hover {
     display: block;
     border-radius: 25%;
     grid-area: img2;
+  }
+  .wrapper {
+    grid-template: 1fr 2fr 2fr 3fr 2fr/2fr 1fr;
+    grid-template-areas: "r r" "rules pic1" "form pic2" "contact pic3" "link pic4";
+    align-items: start;
+    max-width: 100vw;
+  }
+  .wrapper img {
+    display: block;
+    justify-self: center;
+    align-self: center;
+  }
+  .wrapper section {
+    text-align: center;
+  }
+  .wrapper section ul {
+    text-align: center;
   }
 }/*# sourceMappingURL=styles.css.map */
