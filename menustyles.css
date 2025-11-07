@@ -75,6 +75,10 @@ nav ul li a {
     font-size: calc(var(--bar-height)*2);
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -137,5 +141,9 @@ header.second{
         min-height: var(--menu-height);
         max-height: var(--menu-height);
         padding-top: 30px;
+    }
+
+    .hamburger-menu {
+        width:auto;
     }
 }

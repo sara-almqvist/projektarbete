@@ -39,7 +39,7 @@ body {
 
 header {
     background-color: $bg-color1;
-    background-image: url(/img/fastighet29.jpg), url(file:///Users/saraalmqvist/Documents/projektarbete/img/fastighet29.jpg);
+    background-image: url(/img/header1280.jpeg), url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     height: clamp(50vh, 70vh, 100vh);
@@ -59,6 +59,7 @@ header {
         text-align: center;
         border-radius: 10px;
         margin-bottom: calc($fontsize * 2);
+
     }
 
     button {
@@ -118,6 +119,7 @@ button:focus-visible {
             @include b2-c2();
             padding: 10px;
             margin: 5px;
+            font-size: calc($fontsize * 1.5);
         }
     }
 }
