@@ -137,25 +137,31 @@ main {
 footer {
     @include b2-c2();
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: space-evenly;
     padding: 10px 5px;
     min-width: 100%;
 
-    p {
-        margin: 10px;
-        color: $f-color2;
-        font-size: small;
+    button {
+        text-align: center;
+        @include ord-text();
+        @include b2-c2();
+        padding: 10px;
+        margin-bottom: 8px;
+        margin-right: 5px;
+        text-transform: uppercase;
         
         a {
             text-decoration: none;
             color: $f-color2;
         }
+
+        i {
+            margin: 2px;
+        }
     }
 
-    address {
-        margin-left: 15px;
-    }
 }
 
 .smalltext {
@@ -502,6 +508,10 @@ section.links {
             display: block;
             justify-self: center;
         }
+    }
+
+    footer {
+        flex-direction: row-reverse;
     }
 
 
