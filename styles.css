@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes shiftBg {
   0% {
     background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg);
@@ -456,6 +457,9 @@ section.links {
   .wrapper img {
     display: block;
     justify-self: center;
+  }
+  .wrapper h1::after {
+    content: " och användbara länkar";
   }
   footer {
     flex-direction: row-reverse;

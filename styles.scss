@@ -517,6 +517,10 @@ section.links {
             display: block;
             justify-self: center;
         }
+
+        h1::after {
+            content:" och användbara länkar"
+        }
     }
 
     footer {
