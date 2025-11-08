@@ -1,3 +1,14 @@
+@keyframes shiftBg {
+  0% {
+    background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg);
+  }
+  50% {
+    background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/altheader1280.jpeg);
+  }
+  100% {
+    background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header3_1280.jpeg);
+  }
+}
 body {
   background-color: lightblue;
   background: linear-gradient(180deg, rgb(16, 75, 95) 0%, rgb(173, 216, 230) 100%);
@@ -15,6 +26,8 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 500ms linear;
+  animation: none;
 }
 header h1 {
   color: rgb(16, 75, 95);
@@ -479,5 +492,8 @@ section.links {
   }
   .wrapper section ul {
     list-style-type: none;
+  }
+  .header {
+    animation: shiftBg 12s ease-in-out 1s infinite alternate;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -31,6 +31,12 @@ $transistion: 200ms ease-in-out;
     color: $f-color2;
 }
 
+@keyframes shiftBg {
+    0% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg);}
+    50% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/altheader1280.jpeg);}
+    100% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header3_1280.jpeg);}
+}
+
 body {
     background-color: $bg-color1;
     background: linear-gradient(180deg,rgba(16, 75, 95, 1) 0%, rgba(173, 216, 230, 1) 100%);
@@ -48,6 +54,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 500ms linear;
+    animation: none;
+    // animation: shiftBg 12s ease-in-out 1s infinite alternate;
     
     h1 {
         color: $bg-color2;
@@ -433,7 +442,7 @@ section.contactform {
 }
 
 section.links {
-    grid-area: link;
+    grid-area: link;  
 }
 
 .wrapper {
@@ -576,5 +585,8 @@ section.links {
             }
         }
 
+    }
+    .header {
+    animation: shiftBg 12s ease-in-out 1s infinite alternate;
     }
 }
