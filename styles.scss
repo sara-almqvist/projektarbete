@@ -43,7 +43,7 @@ body {
     min-width: 100%;
 }
 
-header {
+header.hero {
     background-color: $bg-color1;
     background-image: url(/img/header1280.jpeg), url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg);
     background-repeat: no-repeat;
@@ -56,7 +56,6 @@ header {
     align-items: center;
     transition: all 500ms linear;
     animation: none;
-    // animation: shiftBg 12s ease-in-out 1s infinite alternate;
     
     h1 {
         color: $bg-color2;
@@ -222,15 +221,15 @@ table {
     tfoot {
         @include background-color();
         font-weight: bold;
-        
-        td:first-child {
-            text-align: right;
-        }
     }
 }
 
 .lghtabell td:nth-child(2){
    text-align: left;
+}
+
+.lghtabell tfoot tr td:nth-child(2){
+    text-align: right
 }
 
 p {
@@ -586,7 +585,8 @@ section.links {
         }
 
     }
-    .header {
-    animation: shiftBg 12s ease-in-out 1s infinite alternate;
+
+    header.hero {
+        animation: shiftBg 12s ease-in-out 1s infinite alternate;
     }
 }
