@@ -1,15 +1,25 @@
 @charset "UTF-8";
 @keyframes shiftBg {
   0% {
-    background-image: url(https://github.com/sara-almqvist/projektarbete/blob/main/img/header1280.jpeg);
+    background-image: url(img/header1280.jpeg);
   }
   50% {
-    background-image: url(https://github.com/sara-almqvist/projektarbete/blob/main/img/altheader1280.jpeg);
+    background-image: url(img/altheader1280.jpeg);
   }
   100% {
-    background-image: url(https://github.com/sara-almqvist/projektarbete/blob/main/img/header3_1280.jpeg);
+    background-image: url(img/header3_1280.jpeg);
   }
 }
+/* @keyframes shiftBg {
+    0% {background-image: url(https://github.com/sara-almqvist/projektarbete/blob/main/img/header1280.jpeg);}
+    50% {background-image: url(https://github.com/sara-almqvist/projektarbete/blob/main/img/altheader1280.jpeg);}
+    100% {background-image: url(https://github.com/sara-almqvist/projektarbete/blob/main/img/header3_1280.jpeg);}
+} */
+/* @keyframes shiftBg {
+    0% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg);}
+    50% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/altheader1280.jpeg);}
+    100% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header3_1280.jpeg);}
+} */
 body {
   background-color: lightblue;
   background: linear-gradient(180deg, rgb(16, 75, 95) 0%, rgb(173, 216, 230) 100%);
@@ -18,7 +28,9 @@ body {
 
 header.hero {
   background-color: lightblue;
-  background-image: url(https://github.com/sara-almqvist/projektarbete/blob/main/img/header1280.jpeg);
+  background-image: url(img/header1280.jpeg);
+  /* background-image: url(https://github.com/sara-almqvist/projektarbete/blob/main/img/header1280.jpeg); */
+  /* background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg); */
   background-repeat: no-repeat;
   background-size: cover;
   height: 70vh;
