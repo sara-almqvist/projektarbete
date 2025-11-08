@@ -39,9 +39,9 @@ $transistion: 200ms ease-in-out;
 }
 
 @keyframes shiftBg {
-    0% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg);}
-    50% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/altheader1280.jpeg);}
-    100% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header3_1280.jpeg);}
+    0% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg), url(https://github.com/sara-almqvist/projektarbete/blob/main/img/header1280.jpeg);}
+    50% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/altheader1280.jpeg), url(https://github.com/sara-almqvist/projektarbete/blob/main/img/altheader1280.jpeg);}
+    100% {background-image: url(file:///Users/saraalmqvist/Documents/projektarbete/img/header3_1280.jpeg), url(https://github.com/sara-almqvist/projektarbete/blob/main/img/header3_1280.jpeg);}
 }
 
 body {
