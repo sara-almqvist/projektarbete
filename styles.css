@@ -224,9 +224,9 @@ h2 {
 .history {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 .history p {
   padding-left: 15px;
@@ -334,9 +334,9 @@ li label:hover {
 .contactform {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   color: black;
   font-size: 16px;
   font-family: Tahoma, serif;
@@ -498,5 +498,14 @@ section.links {
   }
   header.hero {
     animation: shiftBg 12s ease-in-out 1s infinite alternate;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  header.hero {
+    animation: none;
+  }
+  img.wrapper:hover {
+    transform: none;
+    border: 5px solid lightblue;
   }
 }/*# sourceMappingURL=styles.css.map */

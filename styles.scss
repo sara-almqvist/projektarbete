@@ -16,7 +16,7 @@ $transistion: 200ms ease-in-out;
     letter-spacing: 1px;
 }
 
-@mixin background-color {
+@mixin b1-b2 {
     background-color: $bg-color1;
     color: $bg-color2;
 }
@@ -29,6 +29,13 @@ $transistion: 200ms ease-in-out;
 @mixin b2-c2 {
     background-color: $bg-color2;
     color: $f-color2;
+}
+
+@mixin flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes shiftBg {
@@ -50,10 +57,7 @@ header.hero {
     background-size: cover;
     height: clamp(50vh, 70vh, 100vh);
     min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-col-center();
     transition: all 500ms linear;
     animation: none;
     
@@ -220,7 +224,7 @@ table {
     
 
     tfoot {
-        @include background-color();
+        @include b1-b2();
         font-weight: bold;
     }
 }
@@ -251,11 +255,8 @@ h2 {
 }
 
 .history {
-    display: flex;
-    flex-direction: column;
+    @include flex-col-center();
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
 
 
     p {
@@ -371,11 +372,8 @@ li label:hover {
 }
 
 .contactform {
-    display: flex;
-    flex-direction: column;
+    @include flex-col-center();
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     @include ord-text();
 
     input,
@@ -589,5 +587,16 @@ section.links {
 
     header.hero {
         animation: shiftBg 12s ease-in-out 1s infinite alternate;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    header.hero {
+        animation: none;
+    }
+
+    img.wrapper:hover {
+        transform: none;
+        border: 5px solid $bg-color1;
     }
 }
