@@ -175,6 +175,14 @@ footer {
         }
     }
 
+    button:first-of-type:after {
+        content:"Hitta hit"
+    }
+
+    address {
+        display:none;
+    }
+
 }
 
 .smalltext {

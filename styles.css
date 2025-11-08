@@ -146,6 +146,12 @@ footer button a {
 footer button i {
   margin: 2px;
 }
+footer button:first-of-type:after {
+  content: "Hitta hit";
+}
+footer address {
+  display: none;
+}
 
 .smalltext {
   font-style: italic;
