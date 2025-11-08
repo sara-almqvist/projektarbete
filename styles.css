@@ -18,7 +18,7 @@ body {
 
 header.hero {
   background-color: lightblue;
-  background-image: url(/img/header1280.jpeg), url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg);
+  background-image: url(/img/header1280.jpeg), url(file:///Users/saraalmqvist/Documents/projektarbete/img/header1280.jpeg), url(https://github.com/sara-almqvist/projektarbete/blob/main/img/header1280.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 70vh;
