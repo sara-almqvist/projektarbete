@@ -9,7 +9,7 @@ Huvudinnehållet finns på "about.html"/Om oss. Består av bild, tabeller och te
 Den tredje sidan innehåller formulär och länkar. På större skärmar finns bilder med hover-effekt för att göra sidan roligare.
 Det finns ett formulär att fylla i direkt på hemsidan (som mejlas till styrelsen då jag ännu inte kan ta hand om svaren i fil/på server). Övriga formulär är i form av länkar där formulären är skapade i Airtable. Det blir en fördröjning innan formulären öppnas i det nya fönstret första gången beroende på att annan tjänst anropas. 
 
-På alla tre sidor finns samma footer med direktlänk för att mejla till föreningen, föreningens organisationsnummer samt adress (karta i Google maps om man klickar på adressknappen). 
+På alla tre sidor finns samma footer med direktlänk för att mejla till föreningen, föreningens organisationsnummer samt länk till karta i Google maps om man klickar på hussymbolen. 
 
 Den animerade menyn är också gemensam för alla tre sidor. 
 
@@ -35,11 +35,10 @@ media-queries för reduced motion-preferens
 
 Kända begränsningar/förbättringsidéer: 
 Tabellerna syns bara när användaren vill läsa dem (klicka för att se hela tabellen)
-Formuläret öppnas i mejlprogram och måste skickas av användaren
-Footer i liten skärm: bara symboler på adress-knappen för mindre text och blir mindre rörigt.
+Formuläret öppnas i mejlprogram och måste skickas iväg av användaren.
 Menyn på about och contact ha input:checked som default vid skärm på minst 1250px så den syns från början och aktivt stängs ner istället. 
 Ev mindre textstorlek i mobilversionen men samtidigt är det viktigt med god läsbarhet. 
 Nyhetskorten på index.html hade kunnat anpassa så endast ett kort visades i taget i mobil-läge. 
 Ej anpassat layouten efter orientation på device (porträtt eller landskapsläge).
-Inte testat så det fungerar som tänkt i alla webbläsare.
+Inte testat så det fungerar som tänkt i alla webbläsare (har testat i Chrome och Safari).
 
